@@ -7,7 +7,7 @@ defmodule PhoenixChannelWorkshop.Application do
 
   def start(_type, _args) do
     children = [
-      PhoenixChannelWorkshop.Repo,
+      # PhoenixChannelWorkshop.Repo,
       {Phoenix.PubSub, [name: PhoenixChannelWorkshop.PubSub, adapter: Phoenix.PubSub.PG2]},
       PhoenixChannelWorkshopWeb.Endpoint
     ]
