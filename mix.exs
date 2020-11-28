@@ -1,9 +1,9 @@
-defmodule ElixirBoilerplate.Mixfile do
+defmodule PhoenixChannelWorkshop.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :elixir_boilerplate,
+      app: :phoenix_channel_workshop,
       version: "0.0.1",
       elixir: "~> 1.11",
       erlang: "~> 23.1",
@@ -22,7 +22,7 @@ defmodule ElixirBoilerplate.Mixfile do
 
   def application do
     [
-      mod: {ElixirBoilerplate.Application, []},
+      mod: {PhoenixChannelWorkshop.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -99,9 +99,9 @@ defmodule ElixirBoilerplate.Mixfile do
 
   defp releases do
     [
-      elixir_boilerplate: [
-        version: {:from_app, :elixir_boilerplate},
-        applications: [elixir_boilerplate: :permanent],
+      phoenix_channel_workshop: [
+        version: {:from_app, :phoenix_channel_workshop},
+        applications: [phoenix_channel_workshop: :permanent],
         include_executables_for: [:unix],
         steps: [:assemble, :tar]
       ]

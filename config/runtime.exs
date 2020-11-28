@@ -61,29 +61,29 @@ end
 canonical_uri = Environment.get_safe_uri(Environment.get("CANONICAL_URL"))
 static_uri = Environment.get_safe_uri(Environment.get("STATIC_URL"))
 
-config :elixir_boilerplate,
+config :phoenix_channel_workshop,
   canonical_host: Environment.get_uri_part(canonical_uri, :host),
   force_ssl: Environment.get_uri_part(canonical_uri, :scheme) == "https"
 
-config :elixir_boilerplate, ElixirBoilerplate.Repo,
+config :phoenix_channel_workshop, PhoenixChannelWorkshop.Repo,
   pool_size: Environment.get_integer("DATABASE_POOL_SIZE"),
   ssl: Environment.get_boolean("DATABASE_SSL"),
   url: Environment.get("DATABASE_URL")
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.Endpoint,
+config :phoenix_channel_workshop, PhoenixChannelWorkshopWeb.Endpoint,
   debug_errors: Environment.get_boolean("DEBUG_ERRORS"),
   http: [port: Environment.get("PORT")],
   secret_key_base: Environment.get("SECRET_KEY_BASE"),
   static_url: Environment.get_endpoint_url_config(static_uri),
   url: Environment.get_endpoint_url_config(canonical_uri)
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.Router,
+config :phoenix_channel_workshop, PhoenixChannelWorkshopWeb.Router,
   session_key: Environment.get("SESSION_KEY"),
   session_signing_salt: Environment.get("SESSION_SIGNING_SALT")
 
-config :elixir_boilerplate, Corsica, origins: Environment.get_cors_origins()
+config :phoenix_channel_workshop, Corsica, origins: Environment.get_cors_origins()
 
-config :elixir_boilerplate,
+config :phoenix_channel_workshop,
   basic_auth: [
     username: Environment.get("BASIC_AUTH_USERNAME"),
     password: Environment.get("BASIC_AUTH_PASSWORD")

@@ -1,5 +1,5 @@
 {
-  "name": "elixir-boilerplate",
+  "name": "phoenix-channel-workshop",
   "private": true,
   "engine-strict": true,
   "engines": {

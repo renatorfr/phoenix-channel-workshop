@@ -20,14 +20,14 @@ jobs:
       db:
         image: postgres:12
         env:
-          POSTGRES_DB: elixir_boilerplate_test
+          POSTGRES_DB: phoenix_channel_workshop_test
           POSTGRES_PASSWORD: boilerplate
         ports: ["5432:5432"]
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     env:
       MIX_ENV: test
-      DATABASE_URL: postgres://postgres:boilerplate@localhost/elixir_boilerplate_test
+      DATABASE_URL: postgres://postgres:boilerplate@localhost/phoenix_channel_workshop_test
 
     steps:
       - uses: actions/checkout@v2

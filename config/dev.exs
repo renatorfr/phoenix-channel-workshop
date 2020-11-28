@@ -1,6 +1,6 @@
 import Config
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.Endpoint,
+config :phoenix_channel_workshop, PhoenixChannelWorkshopWeb.Endpoint,
   code_reloader: true,
   check_origin: false,
   watchers: [
@@ -14,11 +14,11 @@ config :elixir_boilerplate, ElixirBoilerplateWeb.Endpoint,
     patterns: [
       ~r{priv/gettext/.*$},
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
-      ~r{lib/elixir_boilerplate_web/.*(ee?x)$}
+      ~r{lib/phoenix_channel_workshop_web/.*(ee?x)$}
     ]
   ]
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.ContentSecurityPolicy, allow_unsafe_scripts: true
+config :phoenix_channel_workshop, PhoenixChannelWorkshopWeb.ContentSecurityPolicy, allow_unsafe_scripts: true
 
 config :logger, :console, format: "[$level] $message\n"
 

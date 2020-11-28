@@ -1,4 +1,4 @@
-defmodule ElixirBoilerplateWeb.ConnCase do
+defmodule PhoenixChannelWorkshopWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -16,8 +16,8 @@ defmodule ElixirBoilerplateWeb.ConnCase do
   use ExUnit.CaseTemplate
 
   alias Ecto.Adapters.SQL.Sandbox
-  alias ElixirBoilerplate.Repo
-  alias ElixirBoilerplateWeb.Endpoint
+  alias PhoenixChannelWorkshop.Repo
+  alias PhoenixChannelWorkshopWeb.Endpoint
   alias Phoenix.ConnTest
 
   using do
@@ -26,7 +26,7 @@ defmodule ElixirBoilerplateWeb.ConnCase do
       import Plug.Conn
       import Phoenix.ConnTest
 
-      import ElixirBoilerplateWeb.Router.Helpers
+      import PhoenixChannelWorkshopWeb.Router.Helpers
 
       # The default endpoint for testing
       @endpoint Endpoint
@@ -43,5 +43,5 @@ defmodule ElixirBoilerplateWeb.ConnCase do
     {:ok, conn: %{ConnTest.build_conn() | host: host()}}
   end
 
-  defp host, do: Application.get_env(:elixir_boilerplate, :canonical_host)
+  defp host, do: Application.get_env(:phoenix_channel_workshop, :canonical_host)
 end

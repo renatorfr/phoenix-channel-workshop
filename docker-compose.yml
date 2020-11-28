@@ -1,24 +1,24 @@
 version: '3.3'
 services:
   application:
-    image: elixir_boilerplate:0.0.1
-    container_name: elixir_boilerplate
+    image: phoenix_channel_workshop:0.0.1
+    container_name: phoenix_channel_workshop
     env_file: .env.dev
     environment:
-      - DATABASE_URL=postgres://postgres:development@postgresql/elixir_boilerplate_dev
+      - DATABASE_URL=postgres://postgres:development@postgresql/phoenix_channel_workshop_dev
     ports:
       - 4000:4000
     depends_on:
       - postgresql
   postgresql:
     image: postgres:12-alpine
-    container_name: elixir_boilerplate-postgres
+    container_name: phoenix_channel_workshop-postgres
     environment:
-      - POSTGRES_DB=elixir_boilerplate_dev
+      - POSTGRES_DB=phoenix_channel_workshop_dev
       - POSTGRES_PASSWORD=development
     ports:
       - 5432:5432
     volumes:
-      - elixir_boilerplate_psql:/var/lib/postgresql/data
+      - phoenix_channel_workshop_psql:/var/lib/postgresql/data
 volumes:
-  elixir_boilerplate_psql:
+  phoenix_channel_workshop_psql:

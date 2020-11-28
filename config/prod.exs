@@ -1,6 +1,6 @@
 import Config
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.Endpoint,
+config :phoenix_channel_workshop, PhoenixChannelWorkshopWeb.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json",
   server: true
 
