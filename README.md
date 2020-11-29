@@ -12,7 +12,7 @@
 
 ## 🎯 Objectives and context
 
-…
+Phoenix Channel Workshop
 
 ### Browser support
 

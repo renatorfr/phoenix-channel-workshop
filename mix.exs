@@ -68,7 +68,6 @@ defmodule PhoenixChannelWorkshop.Mixfile do
       # Monitoring
       {:new_relic_agent, "~> 1.20"},
       {:new_relic_phoenix, "~> 0.3"},
-      {:new_relic_absinthe, "~> 0.0"},
 
       # Linting
       {:credo, "~> 1.5", only: [:dev, :test], override: true},
