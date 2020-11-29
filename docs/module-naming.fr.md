@@ -3,7 +3,6 @@ _Prendre connaissance de https://hexdocs.pm/phoenix/contexts.html avant de lire 
 **Grouping:**
 
 - `MyAppWeb` - Regroupe ce qui touche au "web"
-- `MyAppGraphQL` - Regroupe ce qui touche à GraphQL
 
 **Contextes:**
 

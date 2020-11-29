@@ -49,7 +49,6 @@ defmodule PhoenixChannelWorkshopWeb.Endpoint do
   plug(Plug.Head)
 
   plug(PhoenixChannelWorkshopHealth.Router)
-  plug(PhoenixChannelWorkshopGraphQL.Router)
   plug(:halt_if_sent)
   plug(PhoenixChannelWorkshopWeb.Router)
 

@@ -16,9 +16,9 @@ defmodule PhoenixChannelWorkshopWeb.ConnCase do
   use ExUnit.CaseTemplate
 
   alias Ecto.Adapters.SQL.Sandbox
+  alias Phoenix.ConnTest
   alias PhoenixChannelWorkshop.Repo
   alias PhoenixChannelWorkshopWeb.Endpoint
-  alias Phoenix.ConnTest
 
   using do
     quote do

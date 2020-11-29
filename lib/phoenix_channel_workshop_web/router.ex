@@ -18,10 +18,20 @@ defmodule PhoenixChannelWorkshopWeb.Router do
     plug(NewRelic.DistributedTrace.Plug)
   end
 
+  pipeline :api do
+    plug(:accepts, ["json"])
+  end
+
   scope "/", PhoenixChannelWorkshopWeb do
     pipe_through(:browser)
 
     get("/", Home.Controller, :index, as: :home)
+  end
+
+  scope "/api", PhoenixChannelWorkshopWeb do
+    pipe_through(:api)
+
+    post("/purchase", Store.Controller, :purchase, as: :store)
   end
 
   # The session will be stored in the cookie and signed,
