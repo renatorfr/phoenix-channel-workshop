@@ -87,7 +87,10 @@ defmodule PhoenixChannelWorkshop.Mixfile do
       {:faker, "~> 0.16", only: :test},
 
       # Test coverage
-      {:excoveralls, "~> 0.13", only: :test}
+      {:excoveralls, "~> 0.13", only: :test},
+
+      # Events handling
+      {:gen_stage, "~> 1.0"}
     ]
   end
 

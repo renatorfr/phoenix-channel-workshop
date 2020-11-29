@@ -4,7 +4,8 @@ version = Mix.Project.config()[:version]
 
 config :phoenix_channel_workshop,
   ecto_repos: [PhoenixChannelWorkshop.Repo],
-  version: version
+  version: version,
+  hook_broadcaster: PhoenixChannelWorkshop.Hook.Broadcaster
 
 config :phoenix, :json_library, Jason
 

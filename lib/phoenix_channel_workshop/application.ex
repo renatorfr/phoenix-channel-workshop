@@ -7,9 +7,13 @@ defmodule PhoenixChannelWorkshop.Application do
 
   def start(_type, _args) do
     children = [
-      # PhoenixChannelWorkshop.Repo,
       {Phoenix.PubSub, [name: PhoenixChannelWorkshop.PubSub, adapter: Phoenix.PubSub.PG2]},
-      PhoenixChannelWorkshopWeb.Endpoint
+      PhoenixChannelWorkshopWeb.Endpoint,
+      %{id: PhoenixChannelWorkshop.Hook.Broadcaster.Sender, start: {PhoenixChannelWorkshop.Hook.Broadcaster.Sender, :start_link, []}},
+      %{
+        id: PhoenixChannelWorkshop.Hook.Broadcaster.Receiver,
+        start: {PhoenixChannelWorkshop.Hook.Broadcaster.Receiver, :start_link, [endpoint: PhoenixChannelWorkshopWeb.Endpoint]}
+      }
     ]
 
     opts = [strategy: :one_for_one, name: PhoenixChannelWorkshop.Supervisor]
